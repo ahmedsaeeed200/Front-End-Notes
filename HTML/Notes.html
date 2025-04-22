@@ -1,0 +1,298 @@
+<!-- Meta Types-->
+
+<!-- meta : To Define Metadata About The HTML Document -->
+<!-- meta charset="UTF-8" : To Specify The Character Encoding For The HTML Document That would be used on the browser -->
+<!-- meta name="description" : To Provide A Description Of The HTML Document -->
+<!-- meta name="viewport" : To Control The Page's Dimensions And Scaling -->
+<!-- meta name="keywords" : To Provide Keywords For Search Engines -->
+<!-- meta name="author" : To Specify The Author Of The HTML Document -->
+
+<!-- Formatting Elements-->
+
+<!--
+      b => Bold
+      strong => Bold => Important Text
+      i => Italic
+      em => Emphasized
+      mark => Marked Text Or Highlighted Text
+      u => Underline
+      small => Smaller text
+      del => Deleted Text
+      ins => Inserted Text
+      sub => Subscript
+      sup => Superscript
+     -->
+
+<!------------------------------------------------------------------------------>
+
+<!-- Lists – Ul, Ol, DL -->
+
+<!--
+    ul => Unorderd List 
+    li => List Item 
+    ol => Ordered List  
+-->
+
+<!--  Attributes Of Lists -->
+
+<!--  reversed => Reverse The Ordering
+      start => Start From Position
+      type => Type Of Ordering -->
+
+<!------------------------------------------------------------------------------>
+
+<!-- Table -->
+
+<!--
+      thead: To Structure The Header Of The Table
+      tbody: To Structure The Body Of The Table
+      tfoot: To Structure The Footer Of The Table
+      caption: To Add A Title To The Table
+
+      tr => Table Row
+      
+      td => Table Data Cell
+      th => Table Header Cell
+
+      <table> 
+          <caption>Table Title</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>  
+        <tbody>
+          tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tbody> 
+        <tfoot>
+          <tr>
+            <td>Footer 1</td>
+            <td>Footer 2</td>
+          </tr>
+        </tfoot>  
+      </table>
+
+      <-- Attributes -->
+<!--
+        colspan => Number Of Columns To Span
+        rowspan => Number Of Rows To Span
+-->
+
+<!------------------------------------------------------------------------------>
+
+<!-- Semantic Elements -->
+
+<!--
+      header => Header Of The Page(Content Inside It Is "Inline")  ------ ex: <header><a href="index.html">Home</a></header>
+      nav => Navigation Links ------ ex: <nav><a href="#home">Home</a></nav>
+      main => Main Content Of The Page ------ ex: <main><h1>Welcome</h1></main>
+      section => Section Of The Page ------ ex: <section><h2>About</h2></section>
+      article => Article Content Of The Page ----- ex: <article><h2>Article</h2></article>
+      aside => Sidebar Content Of The Page ----- ex: <aside><h2>Sidebar</h2></aside>
+      footer => Footer Of The Page ------ ex: <footer><p>Footer</p></footer>
+
+      figure => Figure Content Of The Page ----- ex: <figure><img src="image.jpg" alt="Image">  <figcaption>Image Caption</figcaption> </figure>
+      figcaption => Caption For The Figure ----- ex: <figcaption>Image Caption</figcaption>
+
+
+      <div> => Generic Container For Flow Content
+
+        These Elements The Same Thing As Div But They Are More Specific And Semantic
+
+        *** Look At The Photo For More Information ***
+-->
+
+<!------------------------------------------------------------------------------>
+
+<!-- Audio -->
+
+<audio controls>
+  *** CONTROLS: To Show The Controls Of The Audio ***
+  <source src="audio.mp3" type="audio/mpeg" />
+  *** Type here to let the browser know the type of the audio file ***
+  <source src="audio.ogg" type="audio/ogg" />
+
+  Your browser does not support the audio element. *** This text will be
+  displayed if the browser does not support the audio element ***
+</audio>
+
+<!------------------------------------------------------------------------------>
+
+<!-- Video -->
+
+<video controls>
+  *** CONTROLS: To Show The Controls Of The Video ***
+  <source src="video.mp4" type="video/mp4" />
+  *** Type here to let the browser know the type of the video file ***
+  <source src="video.ogg" type="video/ogg" />
+
+  Your browser does not support the video element. *** This text will be
+  displayed if the browser does not support the video element ***
+</video>
+
+<!------------------------------------------------------------------------------>
+
+<!-- Form -->
+
+<form action="/submit" method="post">
+  <!-- action: The URL to which the form data will be submitted -->
+  <!-- method: The HTTP method to use when submitting the form (GET or POST) 
+    POST: To Send Data To The Server and the sent data will not be visible in the URL
+    GET: To Send Data To The Server and the sent data will be visible in the URL 
+    -->
+
+  <!--novalidate: To Disable HTML5 Validation while you test the inputs -->
+  <!-- target="_blank": To Open The Form In A New Tab -->
+
+  <!-- Text Input -->
+  <label for="textInput">Text Input:</label>
+  <input
+    type="text"
+    id="textInput"
+    name="textInput"
+    placeholder="Enter text here"
+    maxlength="100"
+    required
+  />
+  <!-- type="text": For single-line text input -->
+  <!-- placeholder: Placeholder text inside the input -->
+  <!-- maxlength: Maximum number of characters allowed -->
+  <!-- required: Makes the field mandatory -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Password Input -->
+  <label for="passwordInput">Password:</label>
+  <input
+    type="password"
+    id="passwordInput"
+    name="passwordInput"
+    minlength="8"
+    maxlength="20"
+    required
+  />
+  <!-- type="password": For password input (hides characters) -->
+  <!-- minlength: Minimum number of characters required -->
+  <!-- maxlength: Maximum number of characters allowed -->
+  <!-- required: Makes the field mandatory -->
+  <!-- name: The name of the input field, used to identify the data when submitted to be used in the backend later on -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Email Input -->
+  <label for="emailInput">Email:</label>
+  <input
+    type="email"
+    id="emailInput"
+    name="emailInput"
+    required
+    readonly
+    disabled
+  />
+  <!-- type="email": For email input (validates email format) -->
+  <!-- required: Makes the field mandatory -->
+  <!-- readonly: Makes the field non-editable and submittable  -->
+  <!-- disabled: Makes the field non-editable and non-submittable -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Number Input -->
+  <label for="numberInput">Number:</label>
+  <input type="number" id="numberInput" name="numberInput" min="1" max="100" />
+  <!-- type="number": For numeric input -->
+  <!-- min: Minimum value allowed -->
+  <!-- max: Maximum value allowed -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Date Input -->
+  <label for="dateInput">Date:</label>
+  <input type="date" id="dateInput" name="dateInput" />
+  <!-- type="date": For date input -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Radio Buttons -->
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="male" />
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female" />
+  <label for="female">Female</label>
+  <!--   *** Note 'name' Must Be The Same Value, Otherwhise it will act as 'checkbox' ***  -->
+  <!-- type="radio": For selecting one option from a group -->
+  <!-- id, form:This allows users to click on the label to select the radio button (The Must Have The Same Value) -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Checkbox -->
+  <label for="subscribe">Subscribe to newsletter:</label>
+  <input type="checkbox" id="subscribe" name="subscribe" />
+  <!-- type="checkbox": For selecting multiple or single options -->
+  <!--   *** Note 'name' Must Be Different Values, Otherwhise it will act as 'radio' ***  -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- File Input -->
+  <label for="fileInput">Upload File:</label>
+  <input type="file" id="fileInput" name="fileInput" />
+  <!-- type="file": For file upload -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Color Picker -->
+  <label for="colorInput">Choose a color:</label>
+  <input type="color" id="colorInput" name="colorInput" />
+  <!-- type="color": For selecting a color -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Range Slider -->
+  <label for="rangeInput">Range:</label>
+  <input type="range" id="rangeInput" name="rangeInput" min="0" max="100" />
+  <!-- type="range": For selecting a value within a range -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Submit Button -->
+  <input type="submit" value="Submit" />
+  <!-- type="submit": For submitting the form -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Reset Button -->
+  <input type="reset" value="Reset" />
+  <!-- type="reset": For resetting the form fields -->
+
+  <!------------------------------------------------------------------------------>
+
+  <!-- Select Dropdown -->
+  <label for="selectInput">Select an option:</label>
+  <select id="selectInput" name="selectInput" multiple>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option4">Option 4</option>
+
+    <!-- Optgroup: To Group Options -->
+    <optgroup label="Group 1">
+      <option value="option5">Option 5</option>
+      <option value="option6">Option 6</option>
+    </optgroup>
+    <optgroup label="Group 2">
+      <option value="option7" selected>Option 7</option>
+      <option value="option8">Option 8</option>
+    </optgroup>
+  </select>
+
+  <!-- option: An option in the dropdown -->
+  <!-- optgroup: To group options in the dropdown -->
+  <!-- selected: To pre-select an option in the dropdown -->
+  <!-- disabled: To disable an option in the dropdown -->
+  <!-- multiple: To allow multiple selections in the dropdown -->
+  <!-- value: The value of the option that will be submitted when the form is submitted -->
+
+  <!------------------------------------------------------------------------------>
+</form>
