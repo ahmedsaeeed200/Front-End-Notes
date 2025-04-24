@@ -1,0 +1,665 @@
+/* ------------ styling Type ------------ */
+
+/*------ 1- External CSS /*------*/
+/*------ 2- Internal CSS /*------*/
+/*------ 3- Inline CSS /*------*/
+
+
+/*------------ Notes ------------ */
+/* 1- External CSS: The CSS code is written in a separate file and linked to the HTML file using the <link> tag in the <head> section. 
+This method is preferred for larger projects as it keeps the HTML and CSS code separate, making it easier to maintain and update.
+
+   Example: <link rel="stylesheet" href="style.css"> */
+
+/* 2- Internal CSS: The CSS code is written within the <style> tag in the <head> section of the HTML file. This method is useful 
+for small projects or when you want to apply styles to a single page without creating a separate CSS file.
+
+    Example: <style> body { background-color: lightblue; } </style> */
+/* 3- Inline CSS: The CSS code is written directly within the HTML elements using the style attribute. This method is not recommended 
+for larger projects as it can make the code messy and difficult to maintain.
+
+    Example: <h1 style="color: blue;">Hello World</h1> */
+
+
+/* => Grouping Multiple Selectors <= */
+.one,
+.two,
+.three,
+.four,
+.my-p {
+  padding: 15px;
+  margin: 12px 0;
+  background-color: #ededed;
+}
+
+/* => Nesting <= */
+
+ * Nesting in CSS refers to the practice of placing one style rule inside another.
+ 
+
+
+.parent .child element {
+
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Background ------------ */
+
+/* 1- == background-color ==: Sets the background color of an element.
+   Example: background-color: lightblue; */
+
+/* 2- == background-image ==: Sets a background image for an element.
+    Example: background-image: url('image.jpg'); */
+
+/* 3- == background-repeat ==: Specifies how the background image should be repeated.
+    Values: repeat, no-repeat, repeat-x, repeat-y.
+    Example: background-repeat: no-repeat; */
+
+/* 4- == background-position ==: Specifies the position of the background image.
+    Values: top, bottom, left, right, center, or specific coordinates (e.g., 50% 50%).
+    Example: background-position: center; */
+
+/* 5- == background-size ==: Specifies the size of the background image.
+    Values: auto, cover, contain, or specific dimensions (e.g., 100px 100px).
+    Example: background-size: cover; */
+
+/* 6- == background-attachment ==: Specifies whether the background image should scroll with the page or be fixed in case we have lots of content.
+    Values: scroll, fixed, local.
+    Example: background-attachment: fixed; */
+
+    /* ------------ Opacity ------------ */
+    /* 1- == opacity ==: Sets the transparency level of an element.
+        Values: 0 (fully transparent) to 1 (fully opaque).
+        Example: opacity: 0.5; */
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------ The Box Model And Box Sizing ------------ */
+
+/* The Box Model describes how the size of an element is calculated: 
+
+    The total width/height of an element is: 
+    width = content + padding + border + margin
+*/
+
+/* box-sizing property controls how the total width and height of an element are calculated.
+    - content-box (default): width/height apply to the content only. Padding and border are added to the outside.
+    - border-box: width/height include content, padding, and border. Makes sizing more predictable.
+    Example:
+*/
+
+.box-content {
+    box-sizing: content-box;
+  }
+  
+  .box-border {
+    box-sizing: border-box;
+  }
+  
+  *** Important Notes ***
+  
+  /* Best Practices:
+      - Use box-sizing: border-box; for all elements to make layouts easier to manage. 
+      - It prevents unexpected sizing issues when adding padding or borders.
+      - You can set it globally:
+  */
+  
+  * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ CSS Variables ------------ */
+
+/*
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+*/
+
+:root {
+    --mainColor: blue;
+    --mainPadding: 10px;
+  }
+
+/* Example: Using Global CSS Variables */
+body {
+    background-color: var(--mainColor);
+    padding: var(--mainPadding);
+}
+
+h1 {
+    color: var(--mainColor);
+    margin-bottom: var(--mainPadding);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ padding ------------ */
+/* 1- == padding ==: Sets the space between the content and the border of an element.
+   Example: padding: 10px; */
+/* 2- == padding-top ==: Sets the top padding of an element.
+   Example: padding-top: 20px; */
+/* 3- == padding-right ==: Sets the right padding of an element.
+   Example: padding-right: 15px; */
+/* 4- == padding-bottom ==: Sets the bottom padding of an element.
+   Example: padding-bottom: 10px; */
+/* 5- == padding-left ==: Sets the left padding of an element.
+   Example: padding-left: 5px; */
+/* 6- == padding: 10px 20px; ==: Sets the top and bottom padding to 10px and the left and right padding to 20px.
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ margin ------------ */
+/* 1- == margin ==: Sets the space outside the border of an element.
+   Example: margin: 20px; */
+
+/* 2- == margin-top ==: Sets the top margin of an element.
+   Example: margin-top: 30px; */
+
+/* 3- == margin-right ==: Sets the right margin of an element.
+   Example: margin-right: 25px; */
+
+/* 4- == margin-bottom ==: Sets the bottom margin of an element.
+    Example: margin-bottom: 15px; */
+
+/* 5- == margin-left ==: Sets the left margin of an element.
+    Example: margin-left: 10px; */
+
+/* 6- == margin: 10px 20px; ==: Sets the top and bottom margin to 10px and the left and right margin to 20px. */
+
+/* 7- == margin: auto; ==: Centers the element horizontally within its parent container. */   *** It's used with 'width' to center block elements. ***
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ border ------------ */
+/* 1- == border ==: Sets the border of an element.
+
+    Example: border: 1px solid black; 
+    Example: border-radius: 10px
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ display ------------ */
+
+
+/*
+
+    => Block <=
+      
+
+    - Takes full width if no width is set
+    - Adds a line break after the element
+    - Respects padding, margin, width, height
+
+    => Inline <=
+
+    - Does not respect width, height
+    - Respects padding and margin (only left and right)
+    - Does not add a line break
+    - Allows elements before and after it on the same line
+
+    => Inline-Block <=
+
+    - Allows elements before and after it on the same line
+    - Respects padding, margin, width, height
+
+*/
+
+*** Notes ***
+
+/* 1- == display: block; ==: Makes the element a block-level element.
+     Example: display: block; */
+
+/* 2- == display: inline; ==: Makes the element an inline element.
+     Example: display: inline; */
+
+/* 3- == display: inline-block; ==: Makes the element an inline-level block container.
+     Example: display: inline-block; */
+
+/* 4- == display: none; ==: Hides the element (it will not take up any space).
+     Example: display: none; */
+
+/* 5- == display: flex; ==: Enables flexbox layout for the container.
+     Example: display: flex; */
+
+/* 6- == display: grid; ==: Enables grid layout for the container.
+     Example: display: grid; */
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Dimensions – Width And Height ------------ */
+
+/* 1- == width ==: Sets the width of an element.
+    Example: width: 200px; */
+    
+     width: fit-content;    /*width: fit-content; Fits the size of the block to its content Automatically  */
+
+    
+
+/* 2- == height ==: Sets the height of an element.
+    Example: height: 100px; */
+
+/* 3- == min-width ==: Sets the minimum width of an element.
+    Example: min-width: 150px; */
+
+/* 4- == max-width ==: Sets the maximum width of an element.
+    Example: max-width: 500px; */
+
+/* 5- == min-height ==: Sets the minimum height of an element.
+    Example: min-height: 80px; */
+
+/* 6- == max-height ==: Sets the maximum height of an element.
+    Example: max-height: 300px; */
+
+/* 7- By default, width and height apply to the content box. To include padding and border, use box-sizing: border-box; */
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Overflow – Overflow-X And Overflow-Y ------------ */
+
+/* 1- == overflow ==: Controls what happens to content that overflows the element's box.
+    Values: visible (default), hidden, scroll, auto.
+    Example: overflow: auto; */
+
+/* 2- == overflow-x ==: Controls horizontal overflow.
+    Values: visible, hidden, scroll, auto.
+    Example: overflow-x: scroll; */
+
+/* 3- == overflow-y ==: Controls vertical overflow.
+    Values: visible, hidden, scroll, auto.
+    Example: overflow-y: hidden; */
+
+/* Best Practices:
+    - Use overflow: auto; to add scrollbars only when needed.
+    - Use overflow: hidden; to clip overflowing content (be careful, as content may become inaccessible).
+    - Use overflow-x and overflow-y for more granular control.
+    - Avoid using overflow: scroll; unless you always want scrollbars visible.
+    - Always consider accessibility and usability when hiding or clipping content.
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Text  ------------ */
+
+/* 1- == color ==: Sets the color of the text.
+    Example: color: #333; */
+
+/* 2- == text-align ==: Sets the horizontal alignment of text.
+    Values: left, right, center, justify.
+    Example: text-align: center; */
+
+/* 3- == text-decoration ==: Adds decoration to text (underline, overline, line-through, none).
+    Example: text-decoration: underline; */
+
+/* 4- == text-transform ==: Controls capitalization of text.
+    Values: none, capitalize, uppercase, lowercase.
+    Example: text-transform: uppercase; */
+
+    none: Will remove the underline of the word
+
+/* 5- == text-shadow ==: Adds shadow to text.
+    Example: text-shadow: 2px 2px 5px #888888; */
+
+/* 6- == letter-spacing ==: Sets the space between characters.
+    Example: letter-spacing: 2px; */
+
+/* 7- == word-spacing ==: Sets the space between words.
+    Example: word-spacing: 10px; */
+
+/* 8- == line-height ==: Sets the space between lines of text.
+    Example: line-height: 1.5; */
+
+/* 9- == font-size ==: Sets the size of the font.
+    Example: font-size: 18px; */
+
+/* 10- == font-weight ==: Sets the thickness of the font.
+     Values: normal, bold, 100–900.
+     Example: font-weight: bold; */
+
+/* 11- == font-style ==: Sets the style of the font.
+     Values: normal, italic, oblique.
+     Example: font-style: italic; */
+
+/* 12- == font-family ==: Sets the font of the text.
+     Example: font-family: 'Arial', sans-serif; */
+
+/* 13- == direction ==: Sets the text direction of an element.
+     Values: ltr (left to right), rtl (right to left).
+     Example: direction: rtl; */
+
+/* 14- == text-overflow ==: Specifies how overflowed content that is not displayed should be signaled to the user.
+        Values: clip, ellipsis.
+        Example: 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Inheritance  ------------ */
+
+Inheritance in CSS refers to the way some property values are passed from parent elements to their children. 
+    
+    Example:
+    .parent {
+        color: blue;
+    }
+    .parent .child {
+       color will be blue unless overridden 
+    }
+
+    To force inheritance, use the 'inherit' keyword:
+    .child {
+      color: inherit;
+    }
+
+    To prevent inheritance, use the 'initial' or 'unset' keywords:
+    .child {
+      color: initial; /* resets to default */
+    }
+
+/* Best Practices:
+    - Use inheritance to reduce repetition in your CSS.
+    - Be aware of which properties are inherited and which are not.
+    - Use 'inherit', 'initial', or 'unset' for more control over inheritance.
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------  Font Size And CSS Units  ------------ */
+
+/* 1- == font-size ==: Sets the size of the font.
+    Example: font-size: 16px; */
+
+/* 2- CSS Units:
+    - px (pixels): Fixed size, most common for precise control.
+      Example: font-size: 18px;
+    - em: Relative to the font-size of the parent element.
+      Example: font-size: 2em; // 2 times the parent font size
+    - rem: Relative to the root (html) font-size.
+      Example: font-size: 1.5rem; // 1.5 times the root font size
+    - % (percent): Relative to the parent font size.
+      Example: font-size: 120%; // 120% of parent font size
+    - vw/vh: Relative to viewport width/height.
+      Example: font-size: 5vw; // 5% of viewport width
+*/
+
+/* Practical Example:
+    html {
+      font-size: 16px; /* root font size */
+    }
+    .parent {
+      font-size: 20px;
+    }
+    .child {
+      font-size: 2em;    /* 40px, since parent is 20px */
+      font-size: 2rem;   /* 32px, since root is 16px */
+      font-size: 120%;   /* 24px, since parent is 20px */
+    }
+*/
+
+/* Best Practices:
+    - Use rem for consistent scaling across the site.
+    - Use em for scaling relative to parent elements.
+    - Avoid mixing too many units in one project.
+    - Use px for elements that must not scale.
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------  Mouse Cursor  ------------ */
+
+/* 1- == cursor ==: Changes the mouse cursor when hovering over an element.
+    Example: cursor: pointer; */
+
+/* Common cursor values:
+    - pointer: A hand icon, commonly used for links and buttons.
+    - default: The default arrow cursor.
+    - text: An I-beam, used for text selection.
+    - move: Indicates something is movable.
+    - not-allowed: A circle with a line through it, indicates action is not allowed.
+    - help: A question mark or balloon, indicates help is available.
+    - wait: An hourglass or spinning wheel, indicates loading.
+    - crosshair: A cross-shaped cursor.
+    - grab / grabbing: Indicates draggable content.
+    - progress: Indicates something is loading but user can still interact.
+    - url('custom-cursor.png'), auto: Use a custom image as the cursor.
+*/
+
+/* Example usage:
+    button {
+      cursor: pointer;
+    }
+    .disabled {
+      cursor: not-allowed;
+    }
+    .moveable {
+      cursor: move;
+    }
+*/
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Position ------------ */
+
+/*
+The position property specifies how an element is positioned in the document. The top, right, bottom, and left properties determine the final location of positioned elements.
+
+Types of positioning:
+1. static (default)
+2. relative
+3. absolute
+4. fixed
+5. sticky
+*/
+
+/* 1- == position: static; == (default)
+    - The element is positioned according to the normal flow of the document.
+    - Top, right, bottom, left, and z-index have no effect.
+    Example:
+    .static-example {
+      position: static;
+    }
+*/
+
+/* 2- == position: relative; ==
+    - The element is positioned relative to its normal position.
+    - Use top, right, bottom, left to move it from where it would normally be.
+    Example:
+    .relative-example {
+      position: relative;
+      top: 10px;
+      left: 20px;
+    }
+*/
+
+/* 3- == position: absolute; ==
+    - The element is positioned relative to the nearest positioned ancestor (not static).
+    - If no positioned ancestor, it uses the initial containing block (usually <html>).
+    Example:
+    .absolute-example {
+      position: absolute;            
+      top: 50px;
+      left: 100px;
+    }
+*/
+important : Use absolute positioning inside a relatively positioned parent for overlays.
+
+/* 4- == position: fixed; ==
+    - The element is positioned relative to the browser window.
+    - It stays in the same place even when the page is scrolled.
+    Example:
+    .fixed-example {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+*/
+
+/* 5- == position: sticky; ==
+    - When you scroll until you exceed it, it will proceed with you along the page.
+    - It is treated as relative until it crosses a specified threshold, then it becomes fixed.
+    Example:
+    .sticky-example {
+      position: sticky;
+      top: 0;
+    }
+*/
+
+/* z-index: Controls the stacking order of positioned elements (higher z-index appears on top).
+
+=====> it will only work when you use the property "Position" <=====
+    Example:
+    .z-index-example {
+      position: absolute;
+      z-index: 10;
+    }
+*/
+
+/* Best Practices:
+    - Use relative positioning for small adjustments.
+    - Use absolute positioning inside a relatively positioned parent for overlays.
+    - Use fixed for elements that should stay visible (like navbars).
+    - Use sticky for headers or elements that should stick while scrolling.
+*/
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Table Styling ------------ */
+
+/* 1- == border-collapse ==: Controls whether table borders are separated or collapsed into a single border.
+    Example: border-collapse: collapse; */
+
+/* 2- == border-spacing ==: Sets the space between table cells (only works if border-collapse is separate).
+    Example: border-spacing: 10px; */
+
+/* 3- == width / height ==: Sets the width and height of the table.
+    Example: width: 100%; */
+
+/* 4- == text-align ==: Aligns text inside table cells.
+    Example: text-align: left; */
+
+/* 5- == vertical-align ==: Aligns content vertically in table cells.
+    Example: vertical-align: middle; */
+
+/* 6- == background-color ==: Sets background color for table, rows, or cells.
+    Example: background-color: #f2f2f2; */
+
+/* 7- == padding ==: Adds space inside table cells.
+    Example: padding: 8px; */
+
+/* 8- == th, td ==: Style table headers and data cells.*/
+    
+table {
+
+  margin: 10px;
+  border-spacing: 0px;
+}
+
+tbody td {
+
+  border: 1px solid black;
+  background-color: bisque;
+  text-align: center;
+}
+
+thead th {
+
+  color: rgb(255, 102, 0);
+  background-color:gray;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+
+/* 9- == table-layout ==: Defines the algorithm used to lay out table cells, rows, and columns.
+    Example: table-layout: fixed; */
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* ------------ Pseudo Classes ------------ */
+
+/* Most Used Pseudo Classes */
+
+/* :hover - When the user hovers over an element */
+a:hover,
+button:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* :active - When an element is being activated (clicked) */
+a:active,
+button:active {
+    background-color: #ccc;
+}
+
+/* :focus - When an element (like input) has focus */
+input:focus,
+textarea:focus {
+    outline: 2px solid #0078d7;
+}
+
+/* :visited - For visited links */
+a:visited {
+    color: purple;
+}
+
+/* :first-child - Selects the first child of its parent */
+ul li:first-child {
+    font-weight: bold;
+}
+
+/* :last-child - Selects the last child of its parent */
+ul li:last-child {
+    font-style: italic;
+}
+
+/* :nth-child(n) - Selects the nth child */
+ul li:nth-child(2) {
+    color: #ff6600;
+}
+
+/* :checked - For checked checkboxes/radios */
+input[type="checkbox"]:checked {
+    
+    accent-color: pink;
+}
+
+input[type="checkbox"]:hover {
+    
+    accent-color: rgb(121, 43, 65);
+}
+
+/* :disabled - For disabled form elements */
+button:disabled,
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
