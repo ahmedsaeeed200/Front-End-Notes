@@ -360,7 +360,7 @@ console.log("Name length:", nameLength);
                           - Square brackets [] hold arrays
                           - Keys must be strings (in double quotes)
                           - Values can be strings, numbers, objects, arrays, true, false, or null
-
+                          */
                           Example JSON object:
                           {
                             "name": "Alice",
@@ -370,7 +370,7 @@ console.log("Name length:", nameLength);
                           }
 
                           Working with JSON in JavaScript:
-                          */
+                          
 
                           // JavaScript object
                           const user = {
