@@ -666,6 +666,8 @@ input:disabled {
 In modern CSS, developers usually set:
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
