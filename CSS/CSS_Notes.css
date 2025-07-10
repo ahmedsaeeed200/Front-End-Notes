@@ -697,6 +697,7 @@ In modern CSS, developers usually set:
 ==> They are used Vertically
 - align-items: stretch => Default Value
 - align-content: stretch => Default Value_______ """ It only Works If I Have Multiple Rows, Otherwise It Has No Effect """
+- align-self
                   ----------------------------------------------------------------------------------
                   flex-start: Items align to the top of the container.
                   flex-end: Items align to the bottom of the container.
