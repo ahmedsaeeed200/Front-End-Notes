@@ -714,6 +714,30 @@ In modern CSS, developers usually set:
    - order: 0 => Default Value   
 */
 
+/* ------------------------------------------------------------------------------------------------------- */
+/* ------------  transition ------------ */
+==> The transition property allows smooth animations when a CSS property changes (e.g., on hover, focus, or class toggle).
+
+-- Where to Place transition?
+Always place the transition rule on the original state, not the :hover or :active selector.
+
+-- Shorthand :
+transition: all 0.5s ease-in;
+
+*EX: 
+selector {
+  transition: [property] [duration] [timing-function] [delay];
+}
+
+🔹 Common Timing Functions
+Timing Function	      Behavior
+linear	               Constant speed
+ease	                  Slow start, fast middle, slow end
+ease-in	               Slow start
+ease-out	               Slow end
+ease-in-out	            Slow start and end
+
+
 
 
 
