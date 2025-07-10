@@ -658,7 +658,6 @@ input:disabled {
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
-
 /* ------------ The Box Model And Box Sizing ------------ */
 
 /* Use box-sizing: border-box to avoid layout issues and simplify spacing calculations. */
@@ -671,7 +670,41 @@ In modern CSS, developers usually set:
   box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------------------------------------------- */
+/* ------------  Flex Box ------------ */
 
+/*
+  Flexible Bo
+  -------------------
+  ==> For Parent <==:
+  -------------------
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+---
+==> It's Used Horizontally
+  - justify-content: flex-start => Default Value
+                   : flex-start|flex-end|center|space-between|space-around|space-evenly|initial|inherit;
+                  ----------------------------------------------------------------------------------
+                  flex-start	Default value. Items are positioned at the beginning of the container	
+                  flex-end	Items are positioned at the end of the container	
+                  center	Items are positioned in the center of the container	
+                  space-between	Items will have space between them	
+                  space-around	Items will have space before, between, and after them	
+                  space-evenly	Items will have equal space around them
+                  ----------------------------------------------------------------------------------
+==> They are used Vertically
+- align-items: stretch => Default Value
+- align-content: stretch => Default Value
+
+-----------------
+==> For Child <==
+-----------------
+   - flex-grow: 0 => Default Value
+   - flex-shrink: 1 => Default Value
+   - order: 0 => Default Value   
+*/
 
 
 
