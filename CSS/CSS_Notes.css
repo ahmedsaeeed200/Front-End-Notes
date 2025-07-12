@@ -186,11 +186,22 @@ h1 {
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* ------------ border ------------ */
-/* 1- == border ==: Sets the border of an element.
+/* 1- == border ==: Sets the border of an element.*/
+   2- border-image:border-image: linear-gradient(
+    to right,
+    #2980b9 20%,
+    #27ae60 20%,
+    #27ae60 40%,
+    #d35400 40%,
+    #d35400 60%,
+    #8e44ad 60%,
+    #8e44ad 80%,
+    #c0392b 80%
+  ) 1;
 
     Example: border: 1px solid black; 
     Example: border-radius: 10px
-*/
+
 
 /* ------------------------------------------------------------------------------------------------------- */
 
