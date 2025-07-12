@@ -187,6 +187,7 @@ h1 {
 
 /* ------------ border ------------ */
 /* 1- == border ==: Sets the border of an element.*/
+   border: 5px solid;
    2- border-image:border-image: linear-gradient(
     to right,
     #2980b9 20%,
