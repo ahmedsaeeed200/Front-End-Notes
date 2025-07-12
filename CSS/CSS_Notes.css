@@ -739,8 +739,22 @@ ease-in-out	            Slow start and end
 
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------  Grid Layout ------------ */
-The Grid Layout Module makes it easier to design a responsive layout structure, without using float or positioning.
+Grid
+  ==> Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+  - grid-template-areas
+  ==> Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
 
+note: The Child Must Be Directly Related To The Parent Without any nested Parent.
+-----------------------------------------------------------------------------------------------------------
 --- Grid vs. Flexbox ---
 The CSS Grid Layout should be used for two-dimensional layout, with rows AND columns.
 The CSS Flexbox Layout should be used for one-dimensional layout, with rows OR columns.
