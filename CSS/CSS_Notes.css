@@ -850,4 +850,17 @@ Creates responsive grid columns or rows with limits.
   align-self: start;
 }
 
+/* ------------------------------------------------------------------------------------------------------- */
+/* ------------  Transform ------------ */
+
+| Function           | What It Does            | Simple Clarification                                        |
+| ------------------ | ----------------------- | ----------------------------------------------------------- |
+| `translate(x, y)`  | Moves the element       | Like dragging it on the screen (but layout stays unchanged) |
+| `rotate(angle)`    | Rotates the element     | Like spinning it like a wheel (around its center)           |
+| `scale(x, y)`      | Resizes the element     | Zoom in/out (bigger or smaller)                             |
+| `skew(x, y)`       | Slants the element      | Tilts it like it's leaning                                  |
+| `matrix(...)`      | All transforms combined | Advanced combo move (rarely used manually)                  |
+| `perspective(...)` | Adds 3D perspective     | Makes things look 3D when rotating                          |
+
+
 
